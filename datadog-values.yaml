@@ -1,0 +1,17 @@
+registry: "gcr.io/datadoghq"
+datadog:
+  apm:
+    socketEnabled: true
+    hostSocketPath: /var/run/datadog/
+    socketPath: /var/run/datadog/apm.socket
+    portEnabled: true
+    port: 8126 # default
+  apiKeyExistingSecret: "datadog-secret"
+  site: "us5.datadoghq.com"
+  logs:
+    enabled: true
+    containerCollectAll: true
+  serviceMonitoring:
+    enabled: true
+  networkMonitoring:
+    enabled: true
