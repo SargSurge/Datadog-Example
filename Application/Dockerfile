@@ -12,7 +12,7 @@ ENV DD_TRACE_AGENT_PORT=8126
 COPY dd-java-agent.jar /dd-java-agent.jar
 COPY target/hello-world-app-1.0-SNAPSHOT.jar /app.jar
 # Expose the default Spring Boot port
-EXPOSE 8080
+EXPOSE 8081
 
 # Run the application with the Datadog APM Java agent
 ENTRYPOINT ["java", "-javaagent:/dd-java-agent.jar", "-jar", "/app.jar"]
